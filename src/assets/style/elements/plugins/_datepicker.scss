@@ -1,0 +1,24 @@
+
+.mx-datepicker {
+
+  .mx-input {
+    @include transition( border .2s, box-shadow .2s );
+
+    &:focus {
+      $border-color: #1976d2;
+      border-color: $border-color !important;
+      @include box-shadow( inset 0 0 0 1px $border-color !important );
+    }
+    &:hover {
+      border-color: rgba( 0,0,0, 0.75 );
+    }
+  }
+
+  &.invalid {
+    .mx-input {
+      $border-color: #ff5252;
+      border-color: $border-color;
+      @include box-shadow( inset 0 0 0 1px $border-color );
+    }
+  }
+}

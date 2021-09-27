@@ -1,0 +1,19 @@
+$preloader-color: #1976d2;
+
+@import "folding-cube";
+@import "bouncing-dots";
+
+.preloader {
+  z-index: 9990;
+  position: absolute;
+  background-color: #fff;
+  top: 0; left: 0; bottom: 0; right: 0;
+
+  @include flexbox;
+  @include align-items( center );
+  @include justify-content( center );
+}
+
+.preloader.preloader-fullscreen {
+  position: fixed;
+}

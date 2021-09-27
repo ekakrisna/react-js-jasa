@@ -1,0 +1,46 @@
+.outerset,
+.v-main {
+  min-height: 100%;
+}
+
+.v-main__wrap {
+  @include flexbox;
+  @include flex-direction(column);
+
+  .mainset-container {
+    @include flex-grow(1);
+  }
+}
+
+.outerset {
+  $column-spacing: 12px;
+
+  .row {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: -$column-spacing;
+    margin-left: -$column-spacing;
+
+    [class^="col"], [class*=" col"]{
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-left: $column-spacing;
+      padding-right: $column-spacing;
+    }
+  }
+
+  .container {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .v-text-field__details {
+    margin-bottom: .5rem !important;
+  }
+}
+
+.v-btn {
+  $btn-margin: 5px;
+  margin-top: $btn-margin;
+  margin-bottom: $btn-margin;
+}
